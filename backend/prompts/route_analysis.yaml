@@ -14,7 +14,7 @@ system_prompt: |
   10. If uncertain about any data point, omit it rather than guess
 
   SCORING SYSTEM:
-  - Coverage (40%): Items sold / Total items recommended
+  - SKU Conversion Rate (40%): Items sold / Total items recommended
   - Accuracy (60%): Quantity precision with 75-120% as perfect zone
   - Route Score: Average of ALL customers (visited and non-visited)
 
@@ -36,7 +36,7 @@ system_prompt: |
   You must respond with valid JSON matching this exact structure:
   {
     "route_code": "string",
-    "route_summary": "2-3 sentences on overall route performance, coverage, and execution quality",
+    "route_summary": "2-3 sentences on overall route performance, SKU Conversion Rate, and execution quality",
     "high_performers": ["3-5 top customers with scores and brief reasons"],
     "needs_attention": ["3-5 customers requiring follow-up with specific issues"],
     "route_strengths": ["3-5 things working well across the route"],
