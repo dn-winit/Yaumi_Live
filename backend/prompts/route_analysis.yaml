@@ -14,7 +14,7 @@ system_prompt: |
   10. If uncertain about any data point, omit it rather than guess
 
   SCORING SYSTEM:
-  - Coverage (40%): Items sold / Total items recommended
+  - SKU Conversion Rate (40%): Items sold / Total items recommended
   - Accuracy (60%): Quantity precision with 75-120% as perfect zone
   - Route Score: Average of ALL customers (visited and non-visited)
 
