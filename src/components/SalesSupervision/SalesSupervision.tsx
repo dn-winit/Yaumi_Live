@@ -1100,7 +1100,7 @@ const SalesSupervision: React.FC = () => {
                                       <span className="font-semibold">Score: {customer.score}%</span>
                                     </div>
                                     <div className="text-[9px] ml-4">
-                                      SKU Conversion Rate: {customer.coverage}% | Accuracy: {customer.accuracy}%
+                                      Coverage: {customer.coverage}% | Accuracy: {customer.accuracy}%
                                     </div>
                                   </div>
 
@@ -1392,7 +1392,7 @@ const SalesSupervision: React.FC = () => {
                 <div className="text-sm text-gray-600 space-y-2">
                   <h4 className="font-semibold text-gray-900">Scoring System:</h4>
                   <ul className="space-y-1">
-                    <li>• <strong>SKU Conversion Rate (40%):</strong> Percentage of recommended items sold</li>
+                    <li>• <strong>Coverage (40%):</strong> Percentage of recommended items sold</li>
                     <li>• <strong>Accuracy (60%):</strong> Quantity precision (75-120% = Perfect)</li>
                     <li>• <strong>Perfect Zone:</strong> Selling 75-120% of recommended gets full accuracy</li>
                     <li>• <strong>Penalties:</strong> Linear penalties for under/over selling outside range</li>
@@ -1516,7 +1516,7 @@ const SalesSupervision: React.FC = () => {
                     <p className="text-lg font-bold text-green-700">{currentAnalysis.skus_sold || 0}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-xs text-gray-600 font-medium">SKU Conversion Rate</p>
+                    <p className="text-xs text-gray-600 font-medium">Coverage</p>
                     <p className="text-lg font-bold text-blue-700">{currentAnalysis.coverage || 0}%</p>
                   </div>
                 </div>
@@ -1542,7 +1542,7 @@ const SalesSupervision: React.FC = () => {
                     {currentAnalysis.performance_score}%
                   </p>
                   <p className="text-xs text-gray-500 mt-1">
-                    SKU Conversion Rate (40%) + Accuracy (60%)
+                    Coverage (40%) + Accuracy (60%)
                   </p>
                 </div>
               </div>
@@ -2023,7 +2023,7 @@ const SalesSupervision: React.FC = () => {
               {/* Overview */}
               <div className="mb-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                 <p className="text-sm text-blue-800">
-                  Two-component scoring system measuring item variety (SKU Conversion Rate) and quantity precision (Accuracy).
+                  Two-component scoring system measuring item variety (Coverage) and quantity precision (Accuracy).
                 </p>
               </div>
 
@@ -2031,7 +2031,7 @@ const SalesSupervision: React.FC = () => {
               <div className="mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
                 <h5 className="font-semibold text-gray-900 mb-2 text-sm">Scoring Formula</h5>
                 <div className="text-center text-base font-mono bg-white p-3 rounded border border-gray-300">
-                  Score = (SKU Conversion Rate × 40%) + (Accuracy × 60%)
+                  Score = (Coverage × 40%) + (Accuracy × 60%)
                 </div>
               </div>
 
@@ -2041,7 +2041,7 @@ const SalesSupervision: React.FC = () => {
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                     <div>
-                      <h5 className="font-semibold text-gray-900">SKU Conversion Rate</h5>
+                      <h5 className="font-semibold text-gray-900">Coverage</h5>
                       <p className="text-xs text-gray-600">Items sold / Total items recommended</p>
                     </div>
                   </div>

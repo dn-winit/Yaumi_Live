@@ -13,7 +13,7 @@ system_prompt: |
   9. If uncertain about any data point, omit it rather than guess
 
   SCORING SYSTEM:
-  - SKU Conversion Rate (40%): Items sold / Total items recommended
+  - Coverage (40%): Items sold / Total items recommended
   - Accuracy (60%): Quantity precision with 75-120% as perfect zone
 
   PERFORMANCE STANDARDS:
@@ -34,7 +34,7 @@ system_prompt: |
   You must respond with valid JSON matching this exact structure:
   {
     "customer_code": "string",
-    "performance_summary": "2-3 sentences explaining overall performance, SKU Conversion Rate, and accuracy",
+    "performance_summary": "2-3 sentences explaining overall performance, coverage, and accuracy",
     "strengths": ["3-5 specific points about what went well"],
     "weaknesses": ["3-5 specific points about issues and gaps"],
     "likely_reasons": ["3-5 root causes explaining why issues occurred"],
@@ -62,7 +62,7 @@ customer_analysis_template: |
   CUSTOMER VISIT ANALYSIS REQUEST
 
   Customer: {customer_code} | Route: {route_code} | Date: {date}
-  Overall Score: {performance_score}% (SKU Conversion Rate: {coverage}%, Accuracy: {accuracy}%)
+  Overall Score: {performance_score}% (Coverage: {coverage}%, Accuracy: {accuracy}%)
 
   ========== DATA SOURCE 1: HISTORICAL REFERENCE DATA ==========
   {historical_context}
@@ -85,7 +85,7 @@ customer_analysis_template: |
   Analyze this customer visit and provide structured insights in JSON format.
 
   Answer these questions using ONLY the data from the tables above:
-  1. SKU Conversion Rate is {coverage}% - which items were sold and which were missed? (Verify in TODAY'S VISIT PERFORMANCE)
+  1. Coverage is {coverage}% - which items were sold and which were missed? (Verify in TODAY'S VISIT PERFORMANCE)
   2. Accuracy is {accuracy}% - for each item, compare Actual vs Recommended (Verify numbers in TODAY'S VISIT PERFORMANCE)
   3. What are the critical issues? (Base on items with 0 actual or >120% or <75% achievement)
   4. What patterns from HISTORICAL REFERENCE DATA explain results? (Only if metrics exist in the data)
